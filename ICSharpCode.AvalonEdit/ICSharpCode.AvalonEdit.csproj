@@ -62,6 +62,9 @@
     <DebugType>Full</DebugType>
     <DefineTrace>True</DefineTrace>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Net40'">
+    <NoWarn>1607; CS0618</NoWarn>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
   <ItemGroup>
     <ProjectReference Include="..\..\NRefactory\ICSharpCode.NRefactory\ICSharpCode.NRefactory.csproj" Condition="$(DefineConstants.Contains('NREFACTORY'))">
